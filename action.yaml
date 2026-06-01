@@ -89,7 +89,7 @@ runs:
               # Typically you'd use `Add-WindowsCapability` but it takes an incredibly long time
               # on GH Actions due to having to re-apply Windows updates (measured time ~20 minutes):
               # https://www.elevenforum.com/t/why-is-openssh-an-optional-feature-and-takes-ages-to-install-add-optional-feature.37224/
-              winget install -e --accept-source-agreements --id Microsoft.OpenSSH.Preview
+              winget install -e --silent --accept-package-agreements --accept-source-agreements --id Microsoft.OpenSSH.Preview
           }
 
           echo "# Add Firewall rule to allow inbound TCP connection on local port 22"
